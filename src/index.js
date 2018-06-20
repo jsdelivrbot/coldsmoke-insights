@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import createHashHistory from 'history/createHashHistory';
 import promise from "redux-promise";
 
 import reducers from "./reducers";
@@ -12,9 +13,11 @@ import MenuAppBar from "./components/menu_app_bar";
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
+const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
+
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter history={hashHistory}>
       <div>
       <MenuAppBar />
         <Switch>

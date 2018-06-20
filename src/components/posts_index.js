@@ -38,7 +38,7 @@ class PostsIndex extends Component {
     constructor(props){
         super(props);
 
-        this.state = { perPage:10, page:1, sortBy:'OBJECTID', criteria:true ,filter:"" };
+        this.state = { perPage:10, page:1, sortBy:'OBJECTID', criteria:true ,filter:'' };
     }
 
     getData(){
@@ -50,13 +50,11 @@ class PostsIndex extends Component {
     }
 
     handleChangePage = (event, page) => {
-        this.setState({ page });
-        this.getData();
+        this.setState({ page }, this.getData.bind(this));
     };
 
     handleChangeRowsPerPage = event => {
-        this.setState({ perPage: event.target.value });
-        this.getData();
+        this.setState({ perPage: event.target.value }, this.getData.bind(this));
     };
 
   renderPosts() {
