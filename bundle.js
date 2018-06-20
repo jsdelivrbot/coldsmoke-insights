@@ -67,6 +67,10 @@
 
 	var _reactRouterDom = __webpack_require__(64);
 
+	var _createHashHistory = __webpack_require__(76);
+
+	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
+
 	var _reduxPromise = __webpack_require__(104);
 
 	var _reduxPromise2 = _interopRequireDefault(_reduxPromise);
@@ -91,12 +95,14 @@
 
 	var createStoreWithMiddleware = (0, _redux.applyMiddleware)(_reduxPromise2.default)(_redux.createStore);
 
+	var hashHistory = (0, _createHashHistory2.default)({ basename: process.env.PUBLIC_URL });
+
 	_reactDom2.default.render(_react2.default.createElement(
 	  _reactRedux.Provider,
 	  { store: createStoreWithMiddleware(_reducers2.default) },
 	  _react2.default.createElement(
 	    _reactRouterDom.BrowserRouter,
-	    { basename: process.env.PUBLIC_URL },
+	    { history: hashHistory },
 	    _react2.default.createElement(
 	      "div",
 	      null,
@@ -53337,16 +53343,14 @@
 	    var _this = _possibleConstructorReturn(this, (PostsIndex.__proto__ || Object.getPrototypeOf(PostsIndex)).call(this, props));
 
 	    _this.handleChangePage = function (event, page) {
-	      _this.setState({ page: page });
-	      _this.getData();
+	      _this.setState({ page: page }, _this.getData.bind(_this));
 	    };
 
 	    _this.handleChangeRowsPerPage = function (event) {
-	      _this.setState({ perPage: event.target.value });
-	      _this.getData();
+	      _this.setState({ perPage: event.target.value }, _this.getData.bind(_this));
 	    };
 
-	    _this.state = { perPage: 10, page: 1, sortBy: 'OBJECTID', criteria: true, filter: "" };
+	    _this.state = { perPage: 10, page: 1, sortBy: 'OBJECTID', criteria: true, filter: '' };
 	    return _this;
 	  }
 
