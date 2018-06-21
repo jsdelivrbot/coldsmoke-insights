@@ -51667,7 +51667,7 @@
 	var ROOT_URL = "https://work-place.herokuapp.com";
 
 	function fetchPosts(perPage, page, sortBy, criteria, filter) {
-	  var request = _axios2.default.get(ROOT_URL + "/api/addresses/" + perPage + "/" + page + "?sortBy=" + sortBy + "&criteria=" + criteria + "&filter=" + criteria);
+	  var request = _axios2.default.get(ROOT_URL + "/api/addresses/" + perPage + "/" + page + "?sortBy=" + sortBy + "&criteria=" + criteria + "&filter=" + filter);
 
 	  return {
 	    type: FETCH_POSTS,
