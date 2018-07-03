@@ -5,6 +5,7 @@ import { compose } from 'recompose';
 import { Link } from "react-router-dom";
 import { fetchPosts } from "../actions";
 import SearchBar from "../containers/search_bar";
+import FilterBar from '../containers/filter_bar';
 import fields from '../constants/fields';
 import TablePaginationActions from "../components/pagination";
 
@@ -20,6 +21,7 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
+import FilterListIcon from '@material-ui/icons/FilterList';
 import TableFooter from '@material-ui/core/TableFooter';
 import TablePagination from '@material-ui/core/TablePagination';
 
@@ -38,11 +40,21 @@ class PostsIndex extends Component {
     constructor(props){
         super(props);
 
-        this.state = { perPage:10, page:1, sortBy:'OBJECTID', criteria:true ,filter:'' };
+        this.state = { perPage:10, page:1, sortBy:'OBJECTID', criteria:true ,filter:'', filters:[] };
     }
 
     getData(){
         this.props.fetchPosts(this.state.perPage,this.state.page,this.state.sortBy,this.state.criteria,this.state.filter);
+    }
+
+    handleAddFilter(filter) {
+        let index = this.state.filters.indexOf(filter);
+
+        if (index < 0) {
+            this.setState({
+              filters: [...this.state.filters, filter]
+          });
+        }
     }
 
     componentDidMount() {
@@ -60,7 +72,7 @@ class PostsIndex extends Component {
   renderPosts() {
     return _.map(this.props.posts, post => {
       return (
-        <TableRow key={post.OBJECTID}>
+          <TableRow key={post.OBJECTID}>
               <TableCell component="th" scope="row"><Link to={`/posts/${post.ADDRESS_ID}`}>{post.OBJECTID}</Link></TableCell>
               <TableCell>{post.SSL}</TableCell>
               <TableCell>{post.ASSESSOR_NAME}</TableCell>
@@ -110,13 +122,22 @@ class PostsIndex extends Component {
     return (
       <div className="container">
         <SearchBar />
+        <FilterBar
+            filters={this.state.filters}
+            perPage={this.state.perPage}
+            page={this.state.page}
+            sortBy={this.state.sortBy}
+            criteria={this.state.criteria}
+            filter={this.state.filter}
+        />
         <Paper className={classes.root}>
             <Table className={classes.table}>
               <TableHead>
                 <TableRow>
                     {fields.map(field => {
                       return (
-                          <TableCell key={field.name}>{field.name}</TableCell>
+                          <TableCell key={field.name}>
+                          <FilterListIcon  /><span>{field.name}</span></TableCell>
                       );
                     })}
                 </TableRow>
@@ -145,7 +166,7 @@ class PostsIndex extends Component {
 }
 
 function mapStateToProps(state) {
-  return { posts: state.posts };
+    return {posts: state.posts};
 }
 
 export default compose(
