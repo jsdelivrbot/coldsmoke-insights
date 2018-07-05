@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {fetchSearch} from '../actions/index';
 import {bindActionCreators } from "redux";
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   container: {
@@ -48,6 +49,7 @@ constructor(props){
 
     return (
       <form className={classes.container} onSubmit={this.handleFormSubmit} noValidate autoComplete="off">
+      <div>
         <TextField
           id="search"
           label="Search"
@@ -57,8 +59,9 @@ constructor(props){
           margin="normal"
         />
         <span className="input-group-btn">
-         <button type="submit" className="btn btn-secondary">Submit</button>
+         <Button type="submit" classes="contained">Submit</Button>
        </span>
+       </div>
       </form>
     );
   }
