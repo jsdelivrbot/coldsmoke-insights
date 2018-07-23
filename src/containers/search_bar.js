@@ -58,9 +58,7 @@ constructor(props){
           onChange={event => this.handleChange(event.target.value)}
           margin="normal"
         />
-        <span className="input-group-btn">
-         <Button type="submit" classes="contained">Submit</Button>
-       </span>
+         <Button type="submit" variant="text" color="primary" >Submit</Button>
        </div>
       </form>
     );
