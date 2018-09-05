@@ -77118,20 +77118,6 @@
 	                )
 	              )
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'hero-content' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Home'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'hero-description' },
-	              'Integrated Tax System Public Extract Facts'
-	            )
 	          )
 	        )
 	      );
