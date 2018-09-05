@@ -94,10 +94,6 @@ class MenuAppBar extends React.Component {
                   </Toolbar>
                 </AppBar>
               </div>
-                <div className="hero-content">
-                    <h1>Home</h1>
-                    <p className="hero-description">Integrated Tax System Public Extract Facts</p>
-                </div>
           </div>
       </div>
     );
