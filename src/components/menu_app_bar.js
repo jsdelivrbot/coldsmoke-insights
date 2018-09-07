@@ -12,7 +12,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-
+import { StickyContainer, Sticky } from 'react-sticky';
 const styles = {
   root: {
     flexGrow: 1,
@@ -25,6 +25,11 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  scroll: {
+   width: '100%',
+   position: 'fixed',
+   marginTop: -20,
+ },
 };
 
 class MenuAppBar extends React.Component {
@@ -54,8 +59,8 @@ class MenuAppBar extends React.Component {
       <div className="header">
           <div className="container">
               <div className={classes.root}>
-                <AppBar className="bar" position="static">
-                  <Toolbar>
+                <AppBar className="header" className="bar" position="fixed" className={classes.scroll}>
+                  <Toolbar className="header">
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                       <MenuIcon />
                     </IconButton>
