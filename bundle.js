@@ -551,7 +551,7 @@
 	 * LICENSE file in the root directory of this source tree.
 	 *
 <<<<<<< HEAD
-	 * 
+	 *
 =======
 	 *
 >>>>>>> master
@@ -2845,7 +2845,7 @@
 	 *
 	 * @typechecks
 <<<<<<< HEAD
-	 * 
+	 *
 =======
 	 *
 >>>>>>> master
@@ -2920,7 +2920,7 @@
 	 * LICENSE file in the root directory of this source tree.
 	 *
 <<<<<<< HEAD
-	 * 
+	 *
 =======
 	 *
 >>>>>>> master
@@ -22052,7 +22052,7 @@
 
 	    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
 <<<<<<< HEAD
-	  
+
 =======
 
 >>>>>>> master
@@ -22933,7 +22933,7 @@
 	// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
 	// whether mapToProps needs to be invoked when props have changed.
 <<<<<<< HEAD
-	// 
+	//
 =======
 	//
 >>>>>>> master
@@ -22947,16 +22947,16 @@
 	// Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
 	// this function wraps mapToProps in a proxy function which does several things:
 <<<<<<< HEAD
-	// 
+	//
 	//  * Detects whether the mapToProps function being called depends on props, which
 	//    is used by selectorFactory to decide if it should reinvoke on props changes.
-	//    
+	//
 	//  * On first call, handles mapToProps if returns another function, and treats that
 	//    new function as the true mapToProps for subsequent calls.
-	//    
+	//
 	//  * On first call, verifies the first result is a plain object, in order to warn
 	//    the developer that their mapToProps function is not returning a valid result.
-	//    
+	//
 =======
 	//
 	//  * Detects whether the mapToProps function being called depends on props, which
@@ -56213,7 +56213,7 @@
 /***/ (function(module, exports) {
 
 <<<<<<< HEAD
-	
+
 =======
 
 >>>>>>> master
@@ -66917,8 +66917,8 @@
 	 * be triggered. The function will be called after it stops being called for
 	 * N milliseconds. If `immediate` is passed, trigger the function on the
 <<<<<<< HEAD
-	 * leading edge, instead of the trailing. The function also has a property 'clear' 
-	 * that is a function which will clear the timer to prevent previously scheduled executions. 
+	 * leading edge, instead of the trailing. The function also has a property 'clear'
+	 * that is a function which will clear the timer to prevent previously scheduled executions.
 =======
 	 * leading edge, instead of the trailing. The function also has a property 'clear'
 	 * that is a function which will clear the timer to prevent previously scheduled executions.
@@ -66975,7 +66975,7 @@
 	    }
 	  };
 <<<<<<< HEAD
-	  
+
 =======
 
 >>>>>>> master
@@ -66984,7 +66984,7 @@
 	      result = func.apply(context, args);
 	      context = args = null;
 <<<<<<< HEAD
-	      
+
 =======
 
 >>>>>>> master
@@ -69632,7 +69632,7 @@
 	      var foundNamedKey = codes[nameOrCode.toLowerCase()]
 	      if (foundNamedKey) { return foundNamedKey === keyCode; }
 <<<<<<< HEAD
-	    
+
 =======
 
 >>>>>>> master
@@ -83521,7 +83521,7 @@
 <<<<<<< HEAD
 	        { className: 'header' },
 =======
-	        { className: 'header' 'classes.scroll' },
+	        { className: 'header' },
 >>>>>>> master
 	        _react2.default.createElement(
 	          'div',
