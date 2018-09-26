@@ -78047,7 +78047,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'header' },
+	        _defineProperty({ className: 'header' }, 'className', classes.scroll),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container' },
@@ -78056,7 +78056,7 @@
 	            { className: classes.root },
 	            _react2.default.createElement(
 	              _AppBar2.default,
-	              (_React$createElement = { className: 'header' }, _defineProperty(_React$createElement, 'className', 'bar'), _defineProperty(_React$createElement, 'position', 'fixed'), _defineProperty(_React$createElement, 'className', classes.scroll), _React$createElement),
+	              (_React$createElement = { className: 'header' }, _defineProperty(_React$createElement, 'className', 'bar'), _defineProperty(_React$createElement, 'position', 'sticky'), _React$createElement),
 	              _react2.default.createElement(
 	                _Toolbar2.default,
 	                { className: 'header' },
