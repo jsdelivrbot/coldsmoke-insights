@@ -78047,7 +78047,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        _defineProperty({ className: 'header' }, 'className', classes.scroll),
+	        { className: 'header' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container' },
@@ -78055,59 +78055,63 @@
 	            'div',
 	            { className: classes.root },
 	            _react2.default.createElement(
-	              _AppBar2.default,
-	              (_React$createElement = { className: 'header' }, _defineProperty(_React$createElement, 'className', 'bar'), _defineProperty(_React$createElement, 'position', 'relative'), _React$createElement),
+	              'div',
+	              { className: classes.scroll },
 	              _react2.default.createElement(
-	                _Toolbar2.default,
-	                { className: 'header' },
+	                _AppBar2.default,
+	                (_React$createElement = { className: 'header' }, _defineProperty(_React$createElement, 'className', 'bar'), _defineProperty(_React$createElement, 'position', 'relative'), _React$createElement),
 	                _react2.default.createElement(
-	                  _IconButton2.default,
-	                  { className: classes.menuButton, color: 'inherit', 'aria-label': 'Menu' },
-	                  _react2.default.createElement(_Menu2.default, null)
-	                ),
-	                _react2.default.createElement(
-	                  _Typography2.default,
-	                  { variant: 'title', color: 'inherit', className: classes.flex },
-	                  'Coldsmoke Insights'
-	                ),
-	                auth && _react2.default.createElement(
-	                  'div',
-	                  null,
+	                  _Toolbar2.default,
+	                  { className: 'header' },
 	                  _react2.default.createElement(
 	                    _IconButton2.default,
-	                    {
-	                      'aria-owns': open ? 'menu-appbar' : null,
-	                      'aria-haspopup': 'true',
-	                      onClick: this.handleMenu,
-	                      color: 'inherit'
-	                    },
-	                    _react2.default.createElement(_AccountCircle2.default, null)
+	                    { className: classes.menuButton, color: 'inherit', 'aria-label': 'Menu' },
+	                    _react2.default.createElement(_Menu2.default, null)
 	                  ),
 	                  _react2.default.createElement(
-	                    _Menu4.default,
-	                    {
-	                      id: 'menu-appbar',
-	                      anchorEl: anchorEl,
-	                      anchorOrigin: {
-	                        vertical: 'top',
-	                        horizontal: 'right'
-	                      },
-	                      transformOrigin: {
-	                        vertical: 'top',
-	                        horizontal: 'right'
-	                      },
-	                      open: open,
-	                      onClose: this.handleClose
-	                    },
+	                    _Typography2.default,
+	                    { variant: 'title', color: 'inherit', className: classes.flex },
+	                    'Coldsmoke Insights'
+	                  ),
+	                  auth && _react2.default.createElement(
+	                    'div',
+	                    null,
 	                    _react2.default.createElement(
-	                      _MenuItem2.default,
-	                      { onClick: this.handleClose },
-	                      'Profile'
+	                      _IconButton2.default,
+	                      {
+	                        'aria-owns': open ? 'menu-appbar' : null,
+	                        'aria-haspopup': 'true',
+	                        onClick: this.handleMenu,
+	                        color: 'inherit'
+	                      },
+	                      _react2.default.createElement(_AccountCircle2.default, null)
 	                    ),
 	                    _react2.default.createElement(
-	                      _MenuItem2.default,
-	                      { onClick: this.handleClose },
-	                      'My account'
+	                      _Menu4.default,
+	                      {
+	                        id: 'menu-appbar',
+	                        anchorEl: anchorEl,
+	                        anchorOrigin: {
+	                          vertical: 'top',
+	                          horizontal: 'right'
+	                        },
+	                        transformOrigin: {
+	                          vertical: 'top',
+	                          horizontal: 'right'
+	                        },
+	                        open: open,
+	                        onClose: this.handleClose
+	                      },
+	                      _react2.default.createElement(
+	                        _MenuItem2.default,
+	                        { onClick: this.handleClose },
+	                        'Profile'
+	                      ),
+	                      _react2.default.createElement(
+	                        _MenuItem2.default,
+	                        { onClick: this.handleClose },
+	                        'My account'
+	                      )
 	                    )
 	                  )
 	                )
