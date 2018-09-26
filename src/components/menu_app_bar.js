@@ -56,9 +56,10 @@ class MenuAppBar extends React.Component {
     const open = Boolean(anchorEl);
 
     return (
-      <div className="header" className={classes.scroll}>
+      <div className="header">
           <div className="container">
               <div className={classes.root}>
+              <div className={classes.scroll}>
                 <AppBar className="header" className="bar" position="relative">
                   <Toolbar className="header">
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
@@ -98,6 +99,7 @@ class MenuAppBar extends React.Component {
                     )}
                   </Toolbar>
                 </AppBar>
+              </div>
               </div>
           </div>
       </div>
