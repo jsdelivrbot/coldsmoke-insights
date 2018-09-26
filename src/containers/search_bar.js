@@ -58,7 +58,7 @@ constructor(props){
           onChange={event => this.handleChange(event.target.value)}
           margin="normal"
         />
-         <Button type="submit" variant="text" color="primary" >Submit</Button>
+         <Button type="submit" variant="text" color="primary" >Search</Button>
        </div>
       </form>
     );
