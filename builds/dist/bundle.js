@@ -56472,7 +56472,7 @@
 	          _react2.default.createElement(
 	            _Button2.default,
 	            { type: 'submit', variant: 'text', color: 'primary' },
-	            'Submit'
+	            'Search'
 	          )
 	        )
 	      );
