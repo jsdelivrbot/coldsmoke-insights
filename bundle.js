@@ -77052,7 +77052,7 @@
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'header' },
+	        { className: 'header' 'classes.scroll' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'container' },
@@ -77125,7 +77125,7 @@
 	            _react2.default.createElement(
 	              'h1',
 	              null,
-	           
+
 	            ),
 	            _react2.default.createElement(
 	              'p',
