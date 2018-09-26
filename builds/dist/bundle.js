@@ -78002,7 +78002,7 @@
 	  },
 	  scroll: {
 	    width: '100%',
-	    position: 'fixed',
+	    position: 'sticky',
 	    marginTop: -20
 	  }
 	};
