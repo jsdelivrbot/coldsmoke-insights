@@ -7,8 +7,7 @@
   "repository": "git@github.com:Coldsmoke-Creative/coldsmoke-insights.git",
   "scripts": {
     "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build",
     "publish-demo": "npm run build && npm run deploy",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
