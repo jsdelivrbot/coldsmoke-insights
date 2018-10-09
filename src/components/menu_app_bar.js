@@ -60,8 +60,8 @@ class MenuAppBar extends React.Component {
           <div className="container">
               <div className={classes.root}>
               <div className={classes.scroll}>
-                <AppBar className="header" className="bar" position="relative">
-                  <Toolbar className="header">
+                <AppBar className="app-bar" className="bar" position="relative">
+                  <Toolbar className="app-bar">
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
                       <MenuIcon />
                     </IconButton>

@@ -38,7 +38,6 @@ constructor(props){
   handleFormSubmit(event) {
       event.preventDefault();
       this.props.fetchSearch(this.state.search);
-      console.log(this.state.search);
       this.setState({
         search: ""
       });

@@ -39,6 +39,7 @@ const styles = theme => ({
 class PostsIndex extends Component {
     constructor(props){
         super(props);
+        var filterName = '';
 
         this.state = { perPage:10, page:1, sortBy:'OBJECTID', criteria:true ,filter:'', filters:[] };
     }
@@ -68,6 +69,13 @@ class PostsIndex extends Component {
     handleChangeRowsPerPage = event => {
         this.setState({ perPage: event.target.value }, this.getData.bind(this));
     };
+
+    handleChildClick(filterName) {
+        var array = [...this.state.filters];
+        var index = array.indexOf(filterName);
+        array.splice(index, 1);
+        this.setState({filters: array});
+    }
 
   renderPosts() {
     return _.map(this.props.posts, post => {
@@ -123,6 +131,7 @@ class PostsIndex extends Component {
       <div className="container">
         <SearchBar />
         <FilterBar
+            passFilter={ filterName => this.handleChildClick(filterName) }
             filters={this.state.filters}
             perPage={this.state.perPage}
             page={this.state.page}
@@ -137,7 +146,7 @@ class PostsIndex extends Component {
                     {fields.map(field => {
                       return (
                           <TableCell key={field.name}>
-                          <FilterListIcon  /><span>{field.name}</span></TableCell>
+                          <FilterListIcon onClick={() => this.handleAddFilter(field)} /><span>{field.name}</span></TableCell>
                       );
                     })}
                 </TableRow>

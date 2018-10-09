@@ -8,7 +8,6 @@ export default function(state = {}, action) {
     case FETCH_POST:
       return { ...state, [action.payload.data.id]: action.payload.data };
     case FETCH_POSTS:
-      console.log(_.mapKeys(action.payload.data.addresses, "_id"));
       return _.mapKeys(action.payload.data.addresses, "_id");
     case FETCH_SEARCH:
     console.log("Action received", action);
